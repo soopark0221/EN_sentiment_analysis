@@ -10,7 +10,7 @@ BERT는 양방향으로 사전학습을 진행한 언어 모델이다. BERT의 �
 - transformers 4.1.1
 
 ## Input data
-Naver sentiment movie corpus v1.0 : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
+Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
 - friends_train.txt : 10.6K dialogs -> Train 데이터로 사용
 - friends_dev.txt : 1.2K dialogs -> Validation 데이터로 사용
 - header : speaker, utterance, annotation, emotion (8 class)
@@ -30,6 +30,7 @@ Naver sentiment movie corpus v1.0 : http://doraemon.iis.sinica.edu.tw/emotionlin
  
 2. Data Load
   - 올바른 train data의 Path를 입력하여 train data를 로딩한다.
+  - json 파일을 dataframe 형식을 변환한다.
   - Data의 label 분포를 통해 Imbalance 여부를 확인한다.
   - Data의 document의 최대, 평균 길이를 확인한다. 이후 단어 임베딩 시 max_length를 결정할 때 사용한다.
  
