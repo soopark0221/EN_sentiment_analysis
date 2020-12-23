@@ -25,7 +25,7 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
 - Emotion label은 총 8개의 class로 구분
   - [neutral, non-neutral, joy, surprise, anger, sadness, disgust, fear]
 - Class Imbalance
-![plot](class_balance.png)
+![](pics/class_balance.png)
 
 ## 환경
 - colab 개발환경 사용
