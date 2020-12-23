@@ -13,6 +13,7 @@ BERT는 양방향으로 사전학습을 진행한 언어 모델이다. BERT의 �
   - seaborn
   - matplotlib
   - numpy
+  - sklearn
 
 ## Input data
 Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
@@ -58,13 +59,18 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
   - Epoch : 4,5
   - Learning rate : 1e-4~ 매 epoch마다 감소하도록 step 부여
   - Train 데이터로 학습, validation 데이터로 평가
-  - 평가 항목 : f1-score
+  - 평가 항목 : accuracy (multiclass data에서는 accuracy, micro f1-score, micro recall, micro precision이 동일한 값을 가진다)
 
-## Test 실행
-- Train 데이터와 동일한 폴더에 Test할 데이터를 저장한다.
-- 단어임베딩과 attention mask를 만들고 학습 모델에 입력한다.
-- 출력값을 실제 데이터 label과 비교하여 모델의 성능을 테스트한다. 
+## Model 저장 
+   - 학습한 모델을 torch.save를 사용해 저장한다.
+   
+## Test 실행 
+  - Model를 테스트하기 위해 csv 형식의 unlabeled된 test data를 준비한다. 
+  - Train 데이터와 동일한 폴더에 Test할 데이터를 저장하거나 path를 정확히 명시한다.
+  - 단어임베딩과 attention mask를 만들고 학습 모델에 입력한다.
+  - 출력값을 실제 데이터 label과 비교하여 모델의 성능을 테스트한다. 
 
 ## Reference
-https://mccormickml.com/2019/07/22/BERT-fine-tuning/
-https://medium.com/@inmoonlight/pytorch%EB%A1%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D%ED%95%98%EA%B8%B0-cnn-62a9326111ae
+  - https://mccormickml.com/2019/07/22/BERT-fine-tuning/
+  - https://medium.com/@inmoonlight/pytorch%EB%A1%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D%ED%95%98%EA%B8%B0-cnn-62a9326111ae
+  - 실습파일 : https://colab.research.google.com/drive/1EMzEfTYjYLgEHjCCP1vEr9oOZLXMocGh?usp=sharing
