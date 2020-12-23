@@ -2,7 +2,7 @@
 
 ## 설명
 BERT는 양방향으로 사전학습을 진행한 언어 모델이다. BERT의 사전학습은 MLM, NSP 두가지 방식으로 진행되며, 사전학습된 모델을 Fine-tuning을 통해 다양한 Task를 수행할 수 있다.
-본 프로젝트에서는 BERT를 사용하여 Friends dialog에 대한 감정 분석을 진행한다. Friends diaglog 데이터는 speaker, utterance, annotation, emotion으로 구성되며 emotion은 8가지로 구분된다. Utterance 입력에 대하여 emotion을 분류하는 Multiclass classification 학습 모델을 만들고 검증할 예정이다. 
+본 프로젝트에서는 BERT를 사용하여 Friends dialog에 대한 감정 분석을 진행한다. Friends diaglog 데이터는 speaker, utterance, annotation, emotion으로 구성되며 emotion은 8가지로 구분된다. Utterance 입력에 대하여 emotion을 분류하는 Multiclass classification 학습 모델을 만든다. 
 
 ## Installation
   - Python 3.7
@@ -32,7 +32,7 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
 
 ## Training 실행
 1. Import Modules
-  - Installation의 모듈들을 설치한다.
+  - Installation의 모듈을 설치한다.
  
 2. Data Load
   - 올바른 train data의 Path를 입력하여 train data를 로딩한다.
@@ -42,7 +42,7 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
  
 3. Preprocessing
   - bert-base-uncased tokenizer를 사용해 utterance 데이터를 토큰화하고 임베딩한다. 
-  - max_sequence_length = 60~100으로 설정하며, Padding하여 문장 길이를 매칭한다.
+  - max_sequence_length = 40~60으로 설정하며, Padding하여 문장 길이를 매칭한다.
   - 임베딩된 문장에서 padding이 아닌 부분은 1, padding 부분은 0으로 입력하는 attention mask를 만들어 0인 부분은 attention을 수행하지 않도록 한다.
   - str 형식의 emotion 데이터를 int로 변환한다.
  
