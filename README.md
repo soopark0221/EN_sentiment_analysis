@@ -43,6 +43,7 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
   - bert-base-uncased tokenizer를 사용해 utterance 데이터를 토큰화하고 임베딩한다. 
   - max_sequence_length = 60~100으로 설정하며, Padding하여 문장 길이를 매칭한다.
   - 임베딩된 문장에서 padding이 아닌 부분은 1, padding 부분은 0으로 입력하는 attention mask를 만들어 0인 부분은 attention을 수행하지 않도록 한다.
+  - str 형식의 emotion 데이터를 int로 변환한다.
  
 4. Modeling
   - torch.utils.data.dataloader를 사용해 문장 입력, attention mask, label 데이터를 묶고 설정한 배치사이즈 만큼 데이터를 가져온다.
