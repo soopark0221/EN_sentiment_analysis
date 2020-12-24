@@ -72,7 +72,7 @@ Friends : http://doraemon.iis.sinica.edu.tw/emotionlines/download.html
   - 단어임베딩과 attention mask를 만들고 학습 모델에 입력한다.
   - 출력값을 실제 데이터 label과 비교하여 모델의 성능을 테스트한다. 
 
-## Reference
+## Reference 
   - https://mccormickml.com/2019/07/22/BERT-fine-tuning/
   - https://medium.com/@inmoonlight/pytorch%EB%A1%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D%ED%95%98%EA%B8%B0-cnn-62a9326111ae
   - 실습파일 : https://colab.research.google.com/drive/1EMzEfTYjYLgEHjCCP1vEr9oOZLXMocGh?usp=sharing
