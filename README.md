@@ -2,7 +2,7 @@
 
 ## 설명
 BERT는 양방향으로 사전학습을 진행한 언어 모델이다. BERT의 사전학습은 MLM, NSP 두가지 방식으로 진행되며, 사전학습된 모델을 Fine-tuning을 통해 다양한 Task를 수행할 수 있다.
-본 프로젝트에서는 BERT를 사용하여 Friends dialog에 대한 감정 분석을 진행한다. Friends diaglog 데이터는 speaker, utterance, annotation, emotion으로 구성되며 emotion은 8가지로 구분된다. Utterance 입력에 대하여 emotion을 분류하는 Multiclass classification 학습 모델을 만든다. 
+본 프로젝트에서는 BERT를 사용하여 Friends dialog에 대한 감정 분석을 진행한다. Friends diaglog 데이터는 speaker, utterance, annotation, emotion으로 구성되며 emotion은 8가지로 구분된다. Utterance 입력에 대하여 emotion를 출력값으로 학습하고 unlabeled 데이터로 평가를 진행한다.
 
 ## Installation
   - Python 3.7
